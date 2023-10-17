@@ -4,7 +4,7 @@
     src: url(mine.otf) format("opentype");
 }
 
-/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/others/oth-5/oth445.cur), auto !important;} /* End https://www.cursors-4u.com */
+ * {cursor: url(https://cur.cursors-4u.net/others/oth-5/oth445.cur), auto !important;} 
                 
 
 body {
@@ -13,8 +13,6 @@ body {
     text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.75);
     background-color: #080808;
     background-image:url(https://cdn.discordapp.com/attachments/1103802791606104186/1130066169693478943/ok.gif);
-    /* background: #000000 url("https://cdn.discordapp.com/attachments/1103802791606104186/1130066169693478943/ok.gif") no-repeat center center fixed; 
-    background-size: cover; */
     animation: shake 15s cubic-bezier(.36,.07,.19,.97) both;
     animation-iteration-count: infinite;
     transform: translate3d(0, 0, 0);
@@ -95,6 +93,7 @@ body {
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+        
     }
 
         .top-wrap img {
@@ -109,7 +108,9 @@ body {
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+            transition: transform .6s; /* Animation */
         }
+
 
         .top-wrap h1 {
             margin: 0;
@@ -166,6 +167,11 @@ body {
             font-family: "Poppins", sans-serif;
             margin-top: .25em;
         }
+        
+        .top-wrap img:hover {
+            transform: scale(1.4); /*  scale for pfp  */
+            filter: drop-shadow(0px 0px 10px #2c2c2c);
+        }
 
     .archive-box .row {
         display: flex;
@@ -196,6 +202,7 @@ body {
                 padding: 1em;
                 min-height: 175px;
                 position: relative;
+                
             }
 
                 .archive-box .img-wrap {
@@ -220,11 +227,13 @@ body {
                         -moz-user-select: none;
                         -ms-user-select: none;
                         user-select: none;
+                        transition: transform .6s; /* Animation */
                     }
 
                     .archive-box a:hover {
                         cursor: pointer;
                         color: #6f00ff;
+                        transition: transform .6s; /* Animation */
                     }
 
                     .archive-box .img-wrap > img {
@@ -242,14 +251,19 @@ body {
                         -moz-user-select: none;
                         -ms-user-select: none;
                         user-select: none;
+                        transition: transform .6s; /* Animation */
 
                     }
 
 
                     .archive-box img:hover {
-                    transform: scale(1.1); /*  scale for pfp  */
-                    filter: drop-shadow(0px 0px 10px #2c2c2c);
+                        transition: transform .6s; /* Animation */
+                        transform: scale(1.1); /*  scale for pfp  */
+                        filter: drop-shadow(0px 0px 10px #2c2c2c);
                     }
+
+                        
+                      
 
                     .archive-box a#button {
                         filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.50));
@@ -297,6 +311,7 @@ body {
                         .socials a img:hover {
                             transform: scale(1.1);
                             filter: drop-shadow(0px 0px 10px #6f00ff);
+                            transition: transform .6s; /* Animation */
                             
                         }
 
