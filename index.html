@@ -215,17 +215,41 @@
 
 </script>
 
+ <!--audio-->
+
+  <script>
+var audio = document.getElementById('audio');
+
+document.getElementById("enter").addEventListener('click', function() {
+    
+    
+    const target = document.getElementById("enter");
+
+    target.style.opacity = '0';
+    target.addEventListener('transitionend', () => target.remove());
+
+    if (typeof window.orientation == 'undefined') { 
+        audio.volume=0.7;
+        audio.play();
+    }
+});
+
+    </script>
+
+
 <audio loop="" preload="auto" id="song">
-    <source src="assets/music/gravity.mp3">
+    <source src="https://cdn.discordapp.com/attachments/1156768631322050581/1163651492234936372/LUNAROSgemAqueusaigue___nuv.mp3>
    </audio>
-   <!-- music mobile -->
+   <!-- phone audio -->
    <script>
     window.addEventListener('click', () => {
         document.getElementById("song").play();
-
-
+        var audio = document.getElementById("song");
+        audio.volume = 0.3;
     });
    </script>
+
+    
     <div id="snow"></div>
     <script src="snow.js"></script>
 
